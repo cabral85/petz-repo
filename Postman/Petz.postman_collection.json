@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "b8986451-4e04-435a-89b1-f01d520ec579",
+		"name": "Petz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Save Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Denis\",\r\n    \"customerLastName\": \"Lopes\",\r\n    \"customerDateBirth\": \"1992-03-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerDateBirth\": \"1993-03-14\",\r\n  \"customerLastName\": \"Lopes\",\r\n  \"customerName\": \"Denis\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Get All Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"breed\": \"Labrador\",\r\n    \"customer\": {\r\n        \"customerDateBirth\": \"1992-03-14\",\r\n        \"customerLastName\": \"Lopes\",\r\n        \"customerName\": \"Denis\",\r\n        \"customerId\": 1\r\n    },\r\n    \"petDateBirth\": \"2020-06-20\",\r\n    \"petLastName\": \"Cabral\",\r\n    \"petName\": \"Zuma\",\r\n    \"typePet\": \"Cachorro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pet/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pet/name/Zuma",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"name",
+								"Zuma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Customer Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pet/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Customer Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pet/customer/name/denis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"customer",
+								"name",
+								"denis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pet By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"petId\": 1,\r\n    \"petName\": \"Zuma\",\r\n    \"petLastName\": \"Cabral\",\r\n    \"petDateBirth\": \"2020-06-19\",\r\n    \"breed\": \"Labrador\",\r\n    \"typePet\": \"Cachorro\",\r\n    \"customer\": {\r\n        \"customerDateBirth\": \"1992-03-14\",\r\n        \"customerLastName\": \"Lopes\",\r\n        \"customerName\": \"Denis\",\r\n        \"customerId\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pet/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pet By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pet/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
