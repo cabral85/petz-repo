@@ -1,7 +1,4 @@
 # Application test for Petz Job
-## Created by: Denis Cabral Lopes
-#### E-mail: cabral85@gmail.com
-#### Phone: 11 9 6598 9473
 
 ### To start the application run 
 docker-compose up --build
