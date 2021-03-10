@@ -1,9 +1,8 @@
 package br.com.petz.mypet.service;
 
-import br.com.petz.mypet.entity.Customer;
 import br.com.petz.mypet.entity.Pet;
 import br.com.petz.mypet.repository.PetRepository;
-import br.com.petz.mypet.service.template.PetTemplate;
+import br.com.petz.mypet.service.interfaces.IPet;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PetService implements PetTemplate {
+public class IPetService implements IPet {
     @Autowired
     private PetRepository petRepository;
 
-    private static final Logger logger = Logger.getLogger(CustomerService.class);
+    private static final Logger logger = Logger.getLogger(ICustomerService.class);
 
     @Override
     public boolean savePet(Pet pet) {

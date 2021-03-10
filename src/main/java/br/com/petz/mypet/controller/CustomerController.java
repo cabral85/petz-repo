@@ -1,13 +1,12 @@
 package br.com.petz.mypet.controller;
 
 import br.com.petz.mypet.entity.Customer;
-import br.com.petz.mypet.service.CustomerService;
+import br.com.petz.mypet.service.interfaces.ICustomer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +15,7 @@ import java.util.Optional;
 public class CustomerController {
 
     @Autowired
-    private CustomerService customerService;
+    private ICustomer customerService;
 
 
     @PostMapping()

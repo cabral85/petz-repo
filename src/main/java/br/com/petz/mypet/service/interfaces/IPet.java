@@ -1,11 +1,11 @@
-package br.com.petz.mypet.service.template;
+package br.com.petz.mypet.service.interfaces;
 
 import br.com.petz.mypet.entity.Pet;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface PetTemplate {
+public interface IPet {
     public boolean savePet(Pet pet);
     public Optional<Pet> getPetById(Integer petId);
     public List<Pet> getAllPets();

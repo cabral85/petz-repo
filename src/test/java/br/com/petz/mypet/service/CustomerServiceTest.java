@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 class CustomerServiceTest {
 
     @InjectMocks
-    private CustomerService customerService;
+    private ICustomerService customerService;
 
     @Mock
     private CustomerRepository customerRepository;
