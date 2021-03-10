@@ -1,7 +1,8 @@
 package br.com.petz.mypet.controller;
 
 import br.com.petz.mypet.entity.Pet;
-import br.com.petz.mypet.service.IPetService;
+import br.com.petz.mypet.service.PetService;
+import br.com.petz.mypet.service.interfaces.IPet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class PetController {
 
     @Autowired
-    private IPetService petService;
+    private IPet petService;
 
     @PostMapping()
     public ResponseEntity<String> savePet(@RequestBody Pet pet) {

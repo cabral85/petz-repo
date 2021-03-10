@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 class PetServiceTest {
 
     @InjectMocks
-    private IPetService petService;
+    private PetService petService;
 
     @Mock
     private PetRepository petRepository;

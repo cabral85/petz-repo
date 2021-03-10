@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class IPetService implements IPet {
+public class PetService implements IPet {
     @Autowired
     private PetRepository petRepository;
 
-    private static final Logger logger = Logger.getLogger(ICustomerService.class);
+    private static final Logger logger = Logger.getLogger(CustomerService.class);
 
     @Override
     public boolean savePet(Pet pet) {

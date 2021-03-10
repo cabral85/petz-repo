@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ICustomerService implements ICustomer {
+public class CustomerService implements ICustomer {
     @Autowired
     CustomerRepository customerRepository;
 
-    private static final Logger logger = Logger.getLogger(ICustomerService.class);
+    private static final Logger logger = Logger.getLogger(CustomerService.class);
 
     @Override
     public boolean saveCustomer(Customer customer){
